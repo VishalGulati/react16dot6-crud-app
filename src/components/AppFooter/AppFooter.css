@@ -1,0 +1,9 @@
+footer {
+    background-color: #7f8fa6;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+a#footer-link {
+    color: orangered;
+}

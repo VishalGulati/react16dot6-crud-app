@@ -39,12 +39,39 @@ class TableBody extends Component {
             return (<tr key={index}>
                 <td>{task.fields.title.stringValue}</td>
                 <td>{task.fields.description.stringValue}</td>
-                <td></td>
+                <td>
+                    <button className="btn btn-danger delete-btn" onClick={() => this.deleteTask(task.name)}>
+                        <span className="glyphicon glyphicon-trash"></span> Delete
+                    </button>
+                    <button className="btn btn-primary"><span className="glyphicon glyphicon-edit"></span> Update</button>
+                </td>
             </tr>)
         }) : '';
     }
 
     addNewTask = () => {
+        API.post('', sampleData)
+            .then(res => {
+                this.fetchTasks();
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    }
+
+    deleteTask = (name) => {
+        const taskId = name.split('/').pop();
+        API.delete(`/${taskId}`)
+            .then(res => {
+                this.fetchTasks();
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    }
+
+
+    updateTask = () => {
         API.post('', sampleData)
             .then(res => {
                 this.fetchTasks();
@@ -61,7 +88,7 @@ class TableBody extends Component {
     render() {
         const tableBody = this.getTableBody();
         return (
-            <div className="table-body-container">
+            tableBody ? <div className="table-body-container">
                 <table>
                     <thead>
                         <tr>
@@ -74,8 +101,8 @@ class TableBody extends Component {
                         {tableBody}
                     </tbody>
                 </table>
-                <button className="primary" onClick={this.addNewTask}>Add a new row</button>
-            </div>
+                <button className="btn btn-primary newrow-btn" onClick={this.addNewTask}>Add a new row</button>
+            </div> : ''
         );
     }
 }
