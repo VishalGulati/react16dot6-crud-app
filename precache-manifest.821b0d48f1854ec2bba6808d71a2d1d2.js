@@ -8,15 +8,15 @@ self.__precacheManifest = [
     "url": "/react16dot6-crud-app/static/js/runtime~main.8f6d0c34.js"
   },
   {
-    "revision": "9e8ae3e48ec953abfe40",
-    "url": "/react16dot6-crud-app/static/js/main.9e8ae3e4.chunk.js"
+    "revision": "730f3968a78efb0519d9",
+    "url": "/react16dot6-crud-app/static/js/main.730f3968.chunk.js"
   },
   {
     "revision": "ede86ed8d332909e5735",
     "url": "/react16dot6-crud-app/static/js/1.ede86ed8.chunk.js"
   },
   {
-    "revision": "9e8ae3e48ec953abfe40",
+    "revision": "730f3968a78efb0519d9",
     "url": "/react16dot6-crud-app/static/css/main.9205d1a2.chunk.css"
   },
   {
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/react16dot6-crud-app/static/css/1.6c40f742.chunk.css"
   },
   {
-    "revision": "4a0f1fce46f2e22e9fa74ce2c6dbc653",
+    "revision": "48bfdf65c13b7fd62a597c8bc5c4df5a",
     "url": "/react16dot6-crud-app/index.html"
   }
 ];
